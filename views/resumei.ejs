@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%=name%> - Curriculum Vitae</title>
+
+<meta name="viewport" content="width=device-width"/>
+<meta name="description" content="The Curriculum Vitae of Joe Bloggs."/>
+<meta charset="UTF-8"> 
+
+<link type="text/css" rel="stylesheet" href="/css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'> <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>      
+
+</head>
+<body id="top">
+	<form method="post">
+<div id="cv" class="instaFade" >
+	<div class="mainDetails">
+		<div id="headshot" class="quickFade">
+		<img src="<%= typeof file !='undefined' ? file :'' %>" 			class="img-responsive">
+		</div>
+		
+		<div id="name">
+			<div class="row">
+			<h2 class="quickFade delayThree"><%=name%> <%=til%>
+				
+			</h2>
+			</div>
+		</div>
+		
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li>Email  : <a href="<%=email%>" target="_blank"><%=email%>
+				</a></li>
+				<% if (phone.length == 0 ) { %>
+    <script type="text/javascript">
+   document.getElementById("#pone").style.visibility="hidden";
+     </script>
+      <% } else { %>	
+				<li id="pone">PhoneNo: <%=phone%></li>
+				<% } %>
+				<li>Department : <%=dmt%></li>
+				<% if (rear == null ) { %>
+    <script type="text/javascript">
+    document.getElementById("#year").style.visibility="hidden";
+     </script>
+      <% } else { %>
+				<li id="year">Year : <%=rear%></li>
+				<% } %>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	
+	<% if (txt.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#invisible2").style.visibility="hidden";
+     </script>
+      <% } else { %>
+         
+	<div id="mainArea1" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Career Objectives</h1>
+				</div>
+				
+				<div class="sectionContent">
+					<p><%=txt %></p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		    <% } %>
+
+      
+
+		    <div id="mainArea10" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Education</h1>
+				</div>
+				
+				<div class="center">
+			<table id="long">
+        <thead id="llong">
+          <tr>
+              <th>Education</th>
+              <th>Institute</th>
+              <th>Year of Pass</th>
+              <th>Percentage</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>SSLC</td>
+            <td><%=school%></td>
+            <td><%=pass%></td>
+            <td><%=prnt%></td>
+          </tr>
+          <% if (school1.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#inc").style.visibility="hidden";
+     </script>
+      <% } else { %>
+          <tr id="inc">
+            <td >HSS</td>
+            <td><%=school1%></td>
+            <td><%=pass1%></td>
+            <td><%=prnt1%></td>
+          </tr>
+           <% } %>
+          <tr>
+            <td><%=deg%></td>
+           	<td><%=school2%></td>
+            <td><%=pass2%></td>
+            <td><%=prnt2%></td>
+          </tr>
+          <% if (drees ==null && inss == null  && yrs == null && 		pers ==null) { %>
+    <script type="text/javascript">
+         document.getElementById("#invii").style.visibility="hidden";
+     </script>
+
+     <% } else { %>
+     	<tr id="invii"></tr>
+
+    <script type="text/javascript">
+    var ins=1;
+    $("#invii").append("<td><%=drees%></td><td><%=inss%></td><td><%=yrs%></td><td><%=pers%></td>").atrr("name","name"+ins);
+      ins++;
+	</script>
+			
+			<% } %>
+
+        </tbody>
+      </table>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		   
+
+
+		 <% if (date.length ==0 && expr.length == 0 && exper.length == 0) { %>
+    <script type="text/javascript">
+         document.getElementById("#mainArea2").style.visibility="hidden";
+     </script>
+
+     <% } else { %>
+		<div id="mainArea2" class="quickFade delayFive">
+		<section>
+			<div class="sectionTitle">
+				<h1>Work Experience</h1>
+			</div>
+			
+			<div class="sectionContent" >
+				<article>
+					<h2><%=expr%></h2>
+					<p class="subDetails"><%=date%></p>
+					<p><%=exper%></p>
+				</article>
+				
+			</div>
+			<% if (datess.length ==0 && exprss.length == 0 && experss.length == 0) { %>
+    <script type="text/javascript">
+         document.getElementById("#invi").style.visibility="hidden";
+     </script>
+
+     <% } else { %>
+     <div id="invi"></div>
+     <script type="text/javascript">
+     var cnt=1;
+      $("#invi").append(" <div class='sectionContent'><article><h2 name='exprs'><%=exprss%></h2>				<p class='subDetails' name='dates'><%=datess%></p><p name='expers'><%=experss%></p></article></div>").atrr("name",		"name"+cnt);
+      cnt++;
+</script>
+			
+			<% } %>
+			<div class="clear"></div>
+		</section>
+		
+		</div>
+		<% } %>
+
+
+		 <% if (lan == null && design == null && other.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#mainArea10").style.visibility="hidden";
+     </script>
+      <% } else { %>
+      
+
+		    <div id="mainArea10" class="quickFade delayFive">
+ 		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Technical Skills</h1>
+				</div>
+				 
+				<div class="sectionContent">
+					  <% if (lan == null) { %>
+    <script type="text/javascript">
+      document.getElementById("#invisible10").style.visibility="hidden";
+     </script>
+      <% } else { %>
+					<div id="invisible10">
+					<h2>programming Languages</h2>
+					<p id="pleft"> <%=lan %></p>
+				</div>
+				<% } %>
+
+				<% if (design == null) { %>
+    <script type="text/javascript">
+     document.getElementById("#invisible11").style.visibility="hidden";
+     </script>
+      <% } else { %>
+				<div id="invisible11">
+					<h2>Designing Softwares</h2>
+					<p id="pleft"> <%=design %></p>
+				</div>
+					<% } %>
+
+					<% if (other.length == 0) { %>
+    <script type="text/javascript">
+    document.getElementById("#invisible12").style.visibility="hidden";
+     </script>
+      <% } else { %>
+					<div id="invisible12">
+					<h2>Other Skills</h2>
+					<p id="pleft"> <%=other %></p>
+				</div>
+				<% } %>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		    <% } %>
+		
+
+		<% if (cul  == null ) { %>
+    <script type="text/javascript">
+      document.getElementById("#mainArea4").style.visibility="hidden";
+     </script>
+      <% } else { %>
+         
+	<div id="mainArea4" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Languages Known</h1>
+				</div>
+				
+				<div class="sectionContent">
+					<p><%=cul %></p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		    <% } %>
+		
+		    	<% if (inter.length  == 0 ) { %>
+    <script type="text/javascript">
+    document.getElementById("#mainArea5").style.visibility="hidden";
+     </script>
+      <% } else { %>
+         
+	<div id="mainArea5" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Area of Interest</h1>
+				</div>
+				
+				<div class="sectionContent">
+					<p><%=inter %></p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		    <% } %>
+
+		    <% if (award.length  == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#mainArea6").style.visibility="hidden";
+     </script>
+      <% } else { %>
+        
+	<div id="mainArea6" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Awards</h1>
+				</div>
+				
+				<div class="sectionContent">
+					<p><%=award %></p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		    <% } %>
+
+		    	    <% if (work.length  == 0 && conference.length ==0) { %>
+    <script type="text/javascript">
+     document.getElementById("#mainArea7").style.visibility="hidden";
+     </script>
+      <% } else { %>
+      
+     
+	<div id="mainArea7" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Cocurricular Activities</h1>
+				</div>
+				
+				<div class="sectionContent">
+					  <% if (work.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#invisible6").style.visibility="hidden";
+     </script>
+      <% } else { %>
+					<div id="invisible6">
+					<h2>Projects</h2>
+					<p id="pleft"> <%=work %></p>
+				</div>
+				<% } %>
+
+				<% if (conference.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#invisible7").style.visibility="hidden";
+     </script>
+      <% } else { %>
+				<div id="invisible7">
+					<h2>Conferences</h2>
+					<p id="pleft"> <%=conference %></p>
+				</div>
+					<% } %>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		    <% } %>
+
+
+		    <% if (services.length == 0 && sports == null ) { %>
+    <script type="text/javascript">
+     document.getElementById("#mainArea8").style.visibility="hidden";
+     </script>
+      <% } else { %>
+      
+
+		    <div id="mainArea8" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Extracurricular Activities</h1>
+				</div>
+				
+				<div class="sectionContent">
+					  <% if (sports == null) { %>
+    <script type="text/javascript">
+      document.getElementById("#invisible8").style.visibility="hidden";
+     </script>
+      <% } else { %>
+					<div id="invisible8">
+					<h2>Sports </h2>
+					<p id="pleft"> <%=sports %></p>
+				</div>
+				<% } %>
+
+				<% if (services.length == 0) { %>
+    <script type="text/javascript">
+       document.getElementById("#invisible9").style.visibility="hidden";
+     </script>
+      <% } else { %>
+				<div id="invisible9">
+					<h2>Services</h2>
+					<p id="pleft"> <%=services %></p>
+				</div>
+					<% } %>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		    <% } %>
+
+
+
+		        <% if (hobbie.length == 0  ) { %>
+    <script type="text/javascript">
+      document.getElementById("#mainArea9").style.visibility="hidden";
+     </script>
+      <% } else { %>
+
+        
+	<div id="mainArea9" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Hobbies</h1>
+				</div>
+				
+				<div class="sectionContent">
+					<p><%=hobbie%></p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		</div>
+		    <% } %>
+		
+		
+	</div>
+	<footer class="foot">
+		<div class="row">	
+	<button type="button" onclick="pdf()" class="bts">pdf</button>
+	</div>
+	</footer>
+</form>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    	function pdf(){
+    		var specialElementHandler={
+        "#editor":function(element,renderer){
+          return true;
+        }
+      };
+
+    		html2canvas(document.getElementById("cv"),{
+    			onrendered :function(canvas){
+    			var img=canvas.toDataURL("image/png");
+    			var pdf = new jsPDF('p', 'pt', 'letter');
+    			pdf.addImage(img,'JPEG',5,0);
+    			pdf.save('<%=name%>.pdf');
+        		}
+    		})
+    			}
+ 
+        
+    </script>
+</div>
+</body>
+</html>
+
+

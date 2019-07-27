@@ -1,0 +1,739 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+  <title>Resume</title>
+  <meta charset="UTF-8">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+<style>
+.mySlides {display:none;}
+</style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+ <link rel = "stylesheet"href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/css/mdb.min.css" rel="stylesheet">
+  <link href="/css/res.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    </head>
+    <body>
+    <nav>
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong class="animated bounce infinite">Resume</strong>
+    </h5>
+    </nav>
+
+<div class="container">
+
+<form id="align" enctype="multipart/form-data" method="post">
+  <div class="card ">
+    <div class="card-body">
+<div>
+  <h4><strong><p id="alignl">Personal details</p></strong></h4>
+
+  <div class="row">
+    
+    <div class="col-md-4" >
+      <!-- Material input -->
+      <div class="md-form form-group">
+        <input type="text" class="form-control" name="name"  onkeyup="checkInput()" required>
+        <label for="inputPassword4MD">Name</label>
+      </div>
+    </div>
+    <!-- Grid column -->
+    <div class="col-md-2" >
+     <div class="row">
+    <div class="col s4">
+      <div class="row">
+        <div class="input-field col s4" id="type">
+          <input type="text" id="autocomplete-input" class="autocomplete" name="intl" required>
+          <label for="autocomplete-input">initial</label>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="col-md-6">
+      <div class="md-form form-group">
+        <input type="email" class="form-control" name="email" required>
+        <label for="inputEmail4MD">Email</label>
+      </div>
+    </div>
+  </div>
+        <div class="row">
+        <div class="col-md-6">
+        <div class="row">
+    <div class="col s5">
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" id="autocomplete-input" class="autocomplete" 
+          name="dept" required>
+          <label for="autocomplete-input">Department</label>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+    </div>
+      <div class="col-md-2  " id="top">
+
+   <select name="year" >
+                  <option value = "" disabled selected>Year</option>
+                  <option value = "1">1</option>
+                  <option value = "2">2</option>
+                  <option value = "3">3</option>
+                   <option value = "4">4</option>
+               </select>       
+</div>
+    </div>
+
+    <div class="row">
+       <div class="col-md-6" >
+      <div class="file-field" id="bottom">
+    <a class="btn-floating purple-gradient mt-0 float-left">
+      <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+      <input type="file" name="myfile" >
+    </a>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" placeholder="Upload your photo" >
+    </div>
+  </div>
+    </div>
+
+  <div class="col-md-6" >
+    <div class="input-field col s12" >  
+      <label for="icon_telephone">Telephone</label>
+          <input id="icon_telephone" type="tel" class="validate" name="phone">
+        </div>
+      </div>
+</div>
+
+    <div>
+  <h4><strong><p id="alignl">Education</p></strong></h4>
+  <div><h5>SSLC</h5></div>
+  <div class="row">
+
+      <div class="col-md-4"> 
+
+     <div class="md-form form-group">
+        <input type="text" class="form-control" name="school" required >
+        <label for="inputEmail4MD">School name</label>
+      </div>
+  </div>
+
+    <div class="col-md-4">
+     <div class="row">
+    <div class="col s4">
+      <div class="row">
+        <div class="input-field col s4" id="year" >
+          <input type="text" id="autocomplete-input" class="autocomplete" name="pass" required>
+          <label for="autocomplete-input">Year of Pass</label>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+    </div>
+
+    <div class="col-md-4">
+     <div class="md-form form-group">
+        <input type="text" class="form-control" name="prnt" required>
+        <label for="inputEmail4MD">Percentage</label>
+      </div>
+  </div>
+</div>
+
+<div><h5>HSS</h5></div>
+  <div class="row">
+
+      <div class="col-md-4"> 
+
+     <div class="md-form form-group">
+        <input type="text" class="form-control" name="school1" >
+        <label for="inputEmail4MD">School name</label>
+      </div>
+  </div>
+
+    <div class="col-md-4">
+     <div class="row">
+    <div class="col s4">
+      <div class="row">
+        <div class="input-field col s4" id="year">
+          <input type="text" id="autocomplete-input" class="autocomplete" name="pass1">
+          <label for="autocomplete-input">Year of Pass</label>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+    </div>
+
+    <div class="col-md-4">
+     <div class="md-form form-group">
+        <input type="text" class="form-control" name="prnt1">
+        <label for="inputEmail4MD">Percentage</label>
+      </div>
+  </div>
+</div>
+
+<div><h5>Degree</h5></div>
+  <div class="row">
+
+<div class="col-md-3"> 
+
+      <div class="row">
+    <div class="col s3">
+      <div class="row">
+        <div class="input-field col s3" id="deg">
+          <input type="text" id="autocomplete-input" class="autocomplete" name="deg2">
+          <label for="autocomplete-input">Degree</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-3"> 
+
+     <div class="md-form form-group">
+        <input type="text" class="form-control" name="school2" >
+        <label for="inputEmail4MD">Institute name</label>
+      </div>
+  </div>
+
+    <div class="col-md-3">
+     <div class="row">
+    <div class="col s4">
+      <div class="row">
+        <div class="input-field col s4" id="year">
+          <input type="text" id="autocomplete-input" class="autocomplete" name="pass2" >
+          <label for="autocomplete-input">Year of Pass</label>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+    </div>
+
+    <div class="col-md-3">
+     <div class="md-form form-group">
+        <input type="text" class="form-control" name="prnt2" >
+        <label for="inputEmail4MD">Percentage</label>
+      </div>
+  </div>
+  <div class="col-md-12">
+  <div>
+   <a class="btn-floating btn-small waves-effect waves-light orange"        id="inc"  name="more"><i class="material-icons">add</i></a>
+   <a class="btn-floating btn-small waves-effect waves-light orange"        id="dec"  name="more"><i class="material-icons">remove</i></a>
+ </div>
+ </div>
+ 
+</div>
+</div>
+
+<div id="addinc"></div>
+    
+
+
+
+       <div>
+  <h4><strong><p id="alignl">Technical Skills</p></strong></h4>
+  <div class="row">
+    
+    <div class="col-md-5" >
+   <select multiple name="prolan">
+      <option value="" disabled selected>Programming languages</option>
+      <option value="Adobe Illustrator CC">Adobe Illustrator CC</option>
+      <option value=" Adobe Photoshop"> Adobe Photoshop</option>
+      <option value="Adobe InDesign">Adobe InDesign</option>
+      <option value="Adobe Dreamweaver">Adobe Dreamweaver</option>
+      <option value="Canva">Canva</option>
+      <option value=" GIMP"> GIMP</option>
+      <option value=" Autodesk SketchBook"> Autodesk SketchBook</option>
+      <option value=" Autodesk 3ds Max  "> Autodesk 3ds Max</option>
+      <option value="Autodesk Product Design Suite">Autodesk Product Design Suite</option>
+      <option value="CATIA">CATIA</option>
+      <option value="MATLAB">MATLAB</option>
+      <option value="AUTOCAD">AUTOCAD</option>
+      <option value="Pro-E/creo">Pro-E/creo</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      
+    </select>
+
+  </div>
+      <!-- Material input -->
+     <div class="col-md-5" >
+      <!-- Material input -->
+      <select multiple name="Design">
+      <option value="" disabled selected>Designing softwares</option>
+      <option value="Adobe Illustrator CC">Adobe Illustrator CC</option>
+      <option value=" Adobe Photoshop"> Adobe Photoshop</option>
+      <option value="Adobe InDesign">Adobe InDesign</option>
+      <option value="Adobe Dreamweaver">Adobe Dreamweaver</option>
+      <option value="Canva">Canva</option>
+      <option value=" GIMP"> GIMP</option>
+      <option value=" Autodesk SketchBook"> Autodesk SketchBook</option>
+      <option value=" Autodesk 3ds Max  "> Autodesk 3ds Max</option>
+      <option value="Autodesk Product Design Suite">Autodesk Product Design Suite</option>
+      <option value="CATIA">CATIA</option>
+      <option value="MATLAB">MATLAB</option>
+      <option value="AUTOCAD">AUTOCAD</option>
+      <option value="Pro-E/creo">Pro-E/creo</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      <option value="Xara Designer Pro">Xara Designer Pro</option>
+      
+    </select>
+  </div>
+    </div>
+  </div>
+        <div class="row">
+        <div class="col-md-5">
+       <div class="form-group shadow-textarea">
+  <textarea class="form-control z-depth-1" id="exampleFormControlTextarea10" 
+  rows="3" placeholder="other skills..." name="other"></textarea>
+</div>
+  </div>
+
+    </div>
+  </div>
+
+       <div>
+  <h4><strong><p id="alignl">Languages Known</p></strong></h4>
+  <div class="row">
+    
+    <div class="col-md-2" >
+      <!-- Material input -->
+      <p>
+      <label>
+        <input type="checkbox" value="Tamil" checked="" / name="culture" required>
+        <span>Tamil</span>
+      </label>
+    </p>
+  </div>
+  <div class="col-md-2" >
+     <p>
+      <label>
+        <input type="checkbox" value="English" checked/ name="culture"  required>
+        <span>English</span>
+      </label>
+    </p>
+  </div>
+</div>
+        <div class="row">
+        <div class="col-md-5">
+        <select multiple name="culture">
+      <option value="" disabled selected>Other Languages</option>
+      <option value="Chinese">CHINESE</option>
+      <option value="Spanish">SPANISH</option>
+      <option value=" Hindi"> HINDI</option>
+       <option value="Arabic">ARABIC</option>
+        <option value="Portugues">PORTUGUESE</option>
+         <option value="Bengali">BENGALI</option>
+          <option value="Russian">RUSSIAN</option>
+           <option value=" Japanese"> JAPANESE</option>
+            <option value="German">GERMAN</option> 
+            <option value="Korean">KOREAN</option>
+             <option value="French">FRENCH</option>
+              <option value="Telugu">TELUGU</option>
+               <option value="Urdu">URDU</option>
+               <option value="Malayalam">MALAYALAM</option>
+    </select>
+  </div>
+    </div>
+  </div>
+
+
+
+     <div>
+  <h4><strong><p id="alignl">Area of Interest</p></strong></h4>
+  <div class="row">
+    <div class="col-md-5" >
+   <div class="md-form form-group">
+        <input type="text" class="form-control" name="Interest" >
+        <label>topic here...</label>
+      </div>
+</div>
+</div>
+  </div>
+
+    <div>
+  <h4><strong><p id="alignl">Cocurricular Activities</p></strong></h4>
+  <div class="row">
+    
+   <div class="col-md-5" >
+    <h5><strong><p id="alignl">Projects</p></strong></h5>
+   <div class="md-form form-group">
+        <input type="text" class="form-control" name="Work" >
+        <label>link here...</label>
+      </div>
+</div>
+
+<div class="col-md-5" >
+    <h5><strong><p id="alignl">Conferences</p></strong></h5>
+   <div class="md-form form-group">
+        <input type="text" class="form-control" name="conf" >
+        <label>topic here...</label>
+      </div>
+</div>
+
+</div>
+  </div>
+
+  <div>
+  <h4><strong><p id="alignl">ExtraCurricular Activities</p></strong></h4>
+  <div class="row">
+    
+    <div class="col-md-5" >
+      <!-- Material input -->
+     <select multiple name="sport">
+      <option value="" disabled selected>Sports/games</option>
+      <option value="Football (Soccer)">Football (Soccer)</option>
+      <option value="Cricket ">Cricket </option>
+      <option value="Field Hockey">Field Hockey</option>
+      <option value="Tennis">Tennis</option>
+      <option value="Volleyball">Volleyball</option>
+      <option value="Table Tennis">Table Tennis</option>
+      <option value="Basketball">Basketball</option>
+      <option value="Baseball">Baseball</option>
+      <option value="Golf ">Golf </option>
+      <option value="Rugby">Rugby</option>
+      <option value="Baseball">Baseball</option>
+    </select>
+</div>
+<div class="col-md-5" >
+<div class="form-group shadow-textarea">
+  <textarea class="form-control z-depth-1" id="exampleFormControlTextarea10" 
+  rows="3" placeholder="services..." name="service"></textarea>
+</div>
+</div>
+  </div>
+
+  <div>
+  <h4><strong><p id="alignl">Career Objectives</p></strong></h4>
+  <div class="row">
+    
+    <div class="col-md-8" >
+      <!-- Material input -->
+     <div class="form-group shadow-textarea">
+  <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="4" placeholder=" It states what kind of career you are seeking, and what skills and experiences you have that make you ideal for that career...." name="text" ></textarea>
+</div>
+
+</div>
+</div>
+  </div>
+ 
+
+ <div class="col-md-12" id="right">   
+  <div class="switch">
+  <label>
+    Off
+    <input type="checkbox" id="right1">
+    <span class="lever"></span> On
+  </label>
+</div>
+</div>
+
+
+<div class="col-md-12" id="preview1">   
+  <div class="card">
+    <div class="card-title">
+      Add more informations
+    </div>
+  <div class="card-body" >
+
+    <div class="mySlides">
+      <div class="md-form form-lg">
+  <input type="text" id="inputLGEx" class="form-control form-control-lg" name="award">
+  <label for="inputLGEx">Awards</label>
+</div>
+
+    </div>
+
+    <div class="mySlides">
+     <div class="md-form form-lg">
+  <input type="text" id="inputLGEx" class="form-control form-control-lg" name="hobbie">
+  <label for="inputLGEx">Hobbies</label>
+</div>
+
+    </div>
+
+       <div class="mySlides">
+           <div class="card-title">
+        Work Experiences
+      </div>
+   
+      <div class="row">
+     <div class="row">
+    <div class="col s4">
+      <div class="row">
+        <div class="input-field col s4" id="ens">
+          <input type="text" id="autocomplete-input" class="autocomplete" name="date">
+          <label for="autocomplete-input">year</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+     <div class="col-md-4">
+     <div class="md-form form-lg">
+
+  <input type="text" id="inputLMEx" class="form-control form-control-small" name="expr" >
+  <label for="inputLGEx">Job Title</label>
+</div>
+</div>
+
+ <div class="col-md-4">
+
+  <div class="form-group shadow-textarea">
+  <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Experience..." name="exper"></textarea>
+</div>
+  </div>
+</div>
+   <div class="col-md-12">
+  <div>
+   <a class="btn-floating btn-small waves-effect waves-light orange" id="plus"  name="more"><i class="material-icons">add</i></a>
+   <a class="btn-floating btn-small waves-effect waves-light orange" id="minus"  name="more"><i class="material-icons">remove</i></a>
+ </div>
+</div>
+  <div id="addbel" class="row"></div>
+</div>
+    </div>
+</div>
+    
+  <div class="row">
+    <div class="col-md-12">
+   <a class="btn-floating btn-medium waves-effect waves-light blue" onclick="plusDivs(-1)"><i class="material-icons">navigate_before</i></a>
+    <a class="btn-floating btn-medium waves-effect waves-light blue" onclick="plusDivs(1)"><i class="material-icons">navigate_next</i></a>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+  <div class="col-md-12" id="preview">
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1" 
+    id="prb">Preview</a>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Select Your Template</h4>
+    </div>
+    <div class="row">
+      <input type="image" src="/css/img/tem.jpg" alt="Submit" width="150px" height="150px" class="over" formaction="/resumei">
+      <input type="image" src="/css/img/red.png" alt="submit" width="150px" height="150px" class="over" formaction="/design1" >
+      
+    </div>
+    
+  </div>
+
+</div>
+
+</div>
+</div>
+</form>
+    
+  </div>
+
+</body>
+
+</html>
+<script >
+   $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        "Mechanical": null,
+        "EEE": null,
+        "ECE": null,
+        "CSE": null,
+        "Chemical engineering": null,
+        "Civil": null,
+      },
+    });
+  });
+        
+</script>
+
+<script >
+   $(document).ready(function(){
+    $('#year,#ens').click(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        "1990": null,
+        "1991": null,
+        "1992": null,
+        "1993": null,
+        "1994": null,
+        "1995": null,"1996": null,"1997": null,"1998": null,"1999": null,
+        "2000": null,"2001": null,"2002": null,"2003": null,"2004": null,
+        "2005": null,"2006": null,"2007": null,"2008": null,"2009": null,
+        "2010": null,"2011": null,"2012": null,"2013": null,"2014": null,
+        "2015": null,"2016": null,"2017": null,"2018": null,"2019": null,
+        "2020": null,"2021": null,"2022": null,"2023": null,"2024": null,
+        "2025": null,
+      },
+    });
+  });
+  });
+        
+</script>
+
+<script>
+         $(document).ready(function() {
+            $('select').material_select();
+         });
+      </script>
+
+      <script type="text/javascript">
+         $(document).ready(function() {
+          $('#right1').click(function(){
+            $('#show').show();
+            $('#right1').hide();
+        $('#preview1').toggle();
+});
+        });
+     </script>
+
+       <script type="text/javascript">
+         $(document).ready(function() {
+          $('#show').click(function(){
+            $('#right1').show();
+            $('#show').hide();
+        $('#preview1').toggle();
+});
+        });
+     </script>
+
+        <script type="text/javascript">
+         $(document).ready(function() {
+          $('#next').click(function(){
+            $('.slider').slideToggle('slow');
+});
+        });
+     </script>
+
+<script type="text/javascript">
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+</script>
+
+
+<script >
+   $(document).ready(function(){
+    $('#deg').click(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        "B.A.": null,
+        "B.A.B.A": null,
+        "B.A.Com": null,
+        "B.Ag": null,
+        "B.Arch": null,
+        "B.B.A": null,"B.E": null,"B.M.Ed": null,"M.A": null,"M.E": null,
+        "M.Ed": null,"B.Sc": null,"M.S": null,
+      },
+    });
+  });
+  });
+        
+</script>
+
+<script >
+   $(document).ready(function(){
+    $('#type').click(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        "A": null,
+        "B": null,
+        "C": null,
+        "D": null,
+        "E": null,
+        "F": null,"G": null,"H": null,"I": null,"J": null,
+        "K": null,"L": null,"M": null,"N": null,"O": null,
+        "P": null,"Q": null,"R": null,"S": null,"T": null,
+        "U": null,"V": null,"W": null,"X": null,"Y": null,
+        "Z": null,
+      },
+    });
+  });
+  });
+        
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   var cnt=0;
+  $("#plus").click(function(){
+   
+  $("#addbel").append(" <div class='card'><div class='card-body'>           <div class='row'><div class='row'><div class='col s4'><div class='row'><div class='input-field col s4' id='ens'><input type='text' id='autocomplete-input' class='autocomplete' name='dates'><label for='autocomplete-input'>year</label></div></div></div></div><div class='col-md-4'><div class='md-form form-lg'><input type='text' id='inputLMEx' class='form-control form-control-small' name='exprs' ><label for='inputLGEx'>Job Title</label></div></div><div class='col-md-4'><div class='form-group shadow-textarea'> <textarea class='form-control z-depth-1' id='exampleFormControlTextarea6' rows='3' placeholder='Experience...' name='expers'></textarea></div></div></div> </div></div>").atrr("name","name"+cnt);
+      cnt++;
+});
+
+   $("#minus").on("click", function() {  
+                $("#addbel").children().last().remove();
+  
+            });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  var ins=0;
+  $("#inc").click(function(){
+
+  $("#addinc").append("<div class='card'><div class='card-body'><div class='row'><div class='col-md-3'><div class='row'><div class='cols3'>  <div class='row'><div class='input-field col s3' id='deg'><input type='text' id='autocomplete-input' class='autocomplete' name='dree'><label for='autocomplete-input'>Degree</label></div>        </div></div></div></div><div class='col-md-3'> <div class='md-form form-group'><input type='text' class='form-control' name='ins'><label for='inputEmail4MD'>Institute name</label></div></div><div class='col-md-3'><div class='row'><div class='col s4'><div class='row'><div class='input-field col s4' id='yr'><input type='text' id='autocomplete-input' class='autocomplete' name='yr'><label for='autocomplete-input'>Year of Pass</label></div></div></div></div></div><div class='col-md-3'><div class='md-form form-group'><input type='text' class='form-control' name='per'><label for='inputEmail4MD'>Percentage</label></div></div> </div></div>").attr("name","name"+ins);
+});
+
+   $("#dec").on("click", function() {  
+                $("#addinc").children().last().remove();
+  
+            });
+});
+</script>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+    $('.modal').modal();
+  });
+</script>

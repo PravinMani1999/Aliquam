@@ -1,0 +1,135 @@
+html
+{
+	font-family: Roboto;
+}
+
+#autocomplete-input
+{
+	padding-top: 6px;
+}
+
+#align
+{
+	width:920px;
+	padding-left: 200px;
+	padding-top: 60px;
+}
+
+#cen
+{
+	padding-left: 300px;
+}
+
+#left
+{
+	padding-left: 20px;
+	width: 400px;
+}
+
+
+
+#left1
+{
+	padding-left: 20px;
+	width: 700px;
+}
+
+#top
+{
+	padding-top: 15px;
+}
+
+#sec
+{
+	padding-left: 30px;
+}
+
+#pod
+{
+	padding-left: 20px;
+}
+
+#far
+{
+	padding-left: 70px;
+}
+#preview1
+{
+	text-align: center;
+	display: none;
+}
+#right
+{
+	text-align: center;
+}
+#preview
+{
+	text-align: center;
+	
+}
+#raw
+{
+	text-align: center;
+}
+.slide
+{
+	position: absolute;
+	display: none;
+}
+.slide.active
+{
+	display: block;
+}
+.gallery li
+{
+	display:none; 
+	list-style:none;
+}
+.gallery li:first-child {display:block;}
+
+#below
+{
+	padding-top: 21px;
+}
+#plus
+{
+	padding-right: 20px;
+}
+#size
+{
+	height: 100px;
+}
+.over
+{
+	margin: 80px; 
+	border:none;
+}
+
+.over:hover {
+  transform: scale(2.5);
+}
+
+.modal
+{
+	width: 1000px;
+	height: 800px;
+}
+
+#prb
+{
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	padding-top: 18px;
+	color: white;
+	background-color: #0066ff;
+}
+
+#bottom
+{
+	padding-top: 14px;
+}
+.card
+{
+	padding-left: 20px;
+}

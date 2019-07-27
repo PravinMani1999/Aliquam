@@ -1,0 +1,18 @@
+html
+{
+	padding-left :200px;
+}
+.foot
+{
+	padding-left: 400px;
+}
+#big
+{
+	height: 35px;
+	width: 100px;
+	background-color: blue;
+	color: white;
+	font-size: 20px;
+	border-style: none;
+	border-radius: 20px;
+}

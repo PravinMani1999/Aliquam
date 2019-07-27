@@ -1,0 +1,359 @@
+<!DOCTYPE html >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>      
+<link rel="stylesheet" type="text/css" href="/css/all.css">
+  <title>Your Resume</title>
+</head>
+
+<body>
+    <div class="container">
+<form method="post">
+  <div id="now">
+  <p style="margin-bottom: 0.0001pt; padding-left: 40px;"><strong><span style="font-size: 16.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';font-size: 30px;"><%=name%> <%=til%></span></strong></p>
+
+<% if (phone.length == 0 ) { %>
+    <script type="text/javascript">
+   document.getElementById("#pone").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<p id="pone" style="margin-bottom: 0.0001pt; padding-left: 40px;"><strong><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';">Contact No: </span></strong><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';"><%=phone%></span></p>
+<% } %>
+
+<p style="margin-bottom: 0.0001pt; padding-left: 40px;"><strong><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';">Department: </span></strong><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';"><%=dmt%></span></p>
+
+<% if (rear == null ) { %>
+    <script type="text/javascript">
+    document.getElementById("#year").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<p id="year" style="margin-bottom: 0.0001pt; padding-left: 40px;"><strong><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';">Year: </span></strong><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';"><%=rear%></span></p>
+<% } %>
+
+<p style="margin-bottom: 0.0001pt; border: none; padding: 0cm 0cm 0cm 40px;"><strong><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';">Email ID&nbsp;&nbsp;&nbsp;&nbsp; : </span></strong><a href="mailto:pravin.mani@outlook.com"><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';"><%=email%></span></a><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica','sans-serif';">.</span></p>
+
+
+
+<% if (txt.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#invisible2").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<p id="invisible2" style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">CAREER OBJECTIVES</span></u></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif'; color: black; background: white;"><%=txt%></span></li>
+</ul>
+</li>
+</ul>
+<% } %>
+
+<p style="line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">&nbsp;</span></p>
+<p style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">EDUCATIONAL QUALIFICATION</span></u></strong></p>
+<table style="width: 485.2pt; margin-left: 45px; border-collapse: collapse; border: none;" width="647">
+<tbody style="padding-left: 40px;">
+<tr style="padding-left: 40px;">
+<td style="width: 73.35pt; border: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;" width="98">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><strong><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">Exam Passed</span></strong></p>
+</td>
+<td style="border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><strong><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">Name of the Institution</span></strong></p>
+</td>
+<td style="border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><strong><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">Year of Passing</span></strong></p>
+</td>
+<td style="border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><strong><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">Percentage/CGPA</span></strong></p>
+</td>
+</tr>
+
+<% if (school2.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#inc").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<tr style="padding-left: 40px;">
+<td style="width: 73.35pt; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt 0cm 45px;" width="98">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=deg%></span></p>
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=school2%></span></p>
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=pass2%></span></p>
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=prnt2%></span></p>
+</td>
+</tr>
+<% } %>
+
+  <% if (school1.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#inc").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<tr id="inc" style="padding-left: 40px;">
+<td style="width: 73.35pt; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt 0cm 45px;" width="98">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">HSC</span></p>
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=school1%></span></p>
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=pass1%></span></p>
+
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=prnt1%></span></p>
+</td>
+</tr>
+<% } %>
+
+<tr style="padding-left: 40px;">
+<td style="width: 73.35pt; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt 0cm 45px;" width="98">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">SSLC</span></p>
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=school%></span></p>
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=pass%></span></p>
+</td>
+<td style="border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;">
+<p style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=prnt%></span></p>
+</td>
+</tr>
+   <% if (drees ==null && inss == null  && yrs == null && pers ==null) { %>
+    <script type="text/javascript">
+         document.getElementById("#print").style.visibility="hidden";
+     </script>
+
+     <% } else { %>
+      <tr id="print"></tr>
+
+    <script type="text/javascript">
+    var ins=1;
+    $("#print").append("<td style='width: 73.35pt; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt 0cm 45px;' width='98'><p style='margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;'><span style='font-size: 12.0pt; font-family: 'Helvetica','sans-serif';'><%=drees%></span></p></td><td style='border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;'><p style='margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;'><span style='font-size: 12.0pt; font-family: 'Helvetica','sans-serif';'><%=inss%></span></p></td><td style='border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;'><p style='margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;'><span style='font-size: 12.0pt; font-family: 'Helvetica','sans-serif';'><%=yrs%></span></p></td><td style='border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt 0cm 45px;'><p style='margin-bottom: 0.0001pt; text-align: center; line-height: normal; padding-left: 40px;'><span style='font-size: 12.0pt; font-family: 'Helvetica','sans-serif';'><%=pers%></span></p></td>").atrr("name","name"+ins);
+    ins++;  
+  </script>
+      
+      <% } %>
+</tbody>
+
+</table>
+
+<% if (lan == null && design == null && other.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#mainArea10").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<p id="mainArea10" style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">TECHNICAL SKILLS</span></u></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+  <% if (lan == null) { %>
+    <script type="text/javascript">
+      document.getElementById("#invisible10").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=lan%></span></li><% } %>
+
+</ul>
+
+<ul>
+  <% if (design == null) { %>
+    <script type="text/javascript">
+     document.getElementById("#invisible11").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=design%></span></li><% } %>
+
+</ul>
+
+<ul>
+  <% if (other.length == 0) { %>
+    <script type="text/javascript">
+    document.getElementById("#invisible12").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=other%></span></li><% } %>
+
+</ul>
+
+ <% } %>
+</li>
+</ul>
+
+
+          <% if (inter.length  == 0 ) { %>
+    <script type="text/javascript">
+    document.getElementById("#mainArea5").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<p style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">AREA OF INTEREST</span></u></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=inter%></span></li>
+</ul>
+ <% } %>
+</li>
+</ul>
+
+<% if (award.length  == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#mainArea6").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<p id="mainArea6" style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">ACHIEVEMENTS/AWARDS</span></u></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=award %></span></li>
+<% } %>
+</ul>
+</li>
+</ul>
+
+<% if (date.length ==0 && expr.length == 0 && exper.length == 0) { %>
+    <script type="text/javascript">
+         document.getElementById("#mainArea2").style.visibility="hidden";
+     </script>
+
+     <% } else { %>
+<p id="mainArea2" style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">WORK EXPERIENCE</span></u></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=expr%>  <%=date%>  <%=exper%></span></li>
+     <% } %>
+ 
+</ul>
+
+</li>
+</ul>
+
+
+<% if (work.length  == 0 && conference.length ==0) { %>
+    <script type="text/javascript">
+     document.getElementById("#mainArea7").style.visibility="hidden";
+     </script>
+      <% } else { %>
+
+<p id="mainArea7" style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">CO CURRICULAR ACTIVITIES</span></u></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+  <% if (work.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#invisible6").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<li id="invisible6"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=work %></span></li>
+<% } %>
+
+<% if (conference.length == 0 ) { %>
+    <script type="text/javascript">
+     document.getElementById("#invisible7").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<li id="invisible7"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=conference %></span></li>
+<% } %>
+</ul>
+<% } %>
+</li>
+</ul>
+
+<% if (services.length == 0 && sports == null ) { %>
+    <script type="text/javascript">
+     document.getElementById("#mainArea8").style.visibility="hidden";
+     </script>
+      <% } else { %>
+
+<p id="mainArea8" style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">EXTRA CURRICULAR ACTIVITIES</span></u></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+   <% if (sports == null) { %>
+    <script type="text/javascript">
+      document.getElementById("#invisible8").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<li id="invisible8"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=sports %></span></li><% } %>
+</ul>
+<% } %> 
+</li>
+</ul>
+
+            <% if (hobbie.length == 0  ) { %>
+    <script type="text/javascript">
+      document.getElementById("#mainArea9").style.visibility="hidden";
+     </script>
+      <% } else { %>
+
+<p id="mainArea9" style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">HOBBIES</span></u></strong><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=hobbie%></span></li>
+</ul>
+ <% } %>
+</li>
+</ul>
+
+<% if (cul  == null ) { %>
+    <script type="text/javascript">
+      document.getElementById("#mainArea4").style.visibility="hidden";
+     </script>
+      <% } else { %>
+<p id="mainArea4" style="line-height: normal; padding-left: 40px;"><strong><u><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">LANGUAGES KNOWN</span></u></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';"><%=cul %></span></li>
+</ul>
+<% } %>
+</li>
+</ul>
+<p style="line-height: normal; padding-left: 40px;"><strong><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">DECLARATION</span></strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-family: 'Arial','sans-serif'; color: #222222; background: white;">I hereby&nbsp;declare&nbsp;that the information furnished above is true to the best of my knowledge.&nbsp;</span></li>
+</ul>
+</li>
+</ul>
+<p style="margin-bottom: 0.0001pt; line-height: normal; padding-left: 80px;"><span style="font-size: 12.0pt; font-family: 'Helvetica','sans-serif';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+     
+   </div>   
+    <div class="foot">
+      <div class="row">
+  <input type="button" onclick="pdf()" value="pdf" id="big"/> 
+    </div>
+    </div>
+    </form>
+     
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      function pdf(){
+      var specialElementHandler={
+        "#editor":function(element,renderer){
+          return true;
+        }
+      };
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        pdf.fromHTML($('#now').get(0),50,20);
+        pdf.save('<%=name%>.pdf');
+        }
+    </script>
+
+
+
+</body>
+</html>

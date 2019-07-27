@@ -1,0 +1,152 @@
+html{height:100%;}
+
+#hnav
+{
+  padding-top: 10px;
+  padding-left: 900px;
+}
+
+.modal
+{
+  height: 500px;
+  width: 550px;
+}
+#modal1
+{
+  line-height: 10px;
+}
+.foot
+{
+  padding-top: 350px;
+  padding-left: 585px;
+
+}
+#cful
+{
+  font-family: Roboto;
+  font-size: 25px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway";
+  font-weight: 300;
+  color: #333;
+}
+
+/* Paragraph & Typographic */
+
+p {
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+.centered {
+  text-align: center;
+}
+
+
+#section-topbar {
+  position: fixed;
+  top: 0;
+  height: 20px;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  overflow: visible;
+  font: normal 16px/24px 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#section-topbar a {
+  color: #fff;
+}
+
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway";
+  font-weight: 300;
+  color: #333;
+}
+
+
+.nav
+{
+  height: 30px;
+}
+
+.centered {
+  text-align: center;
+}
+
+#topbar-inner {
+  background: grey;
+  line-height: 0;
+  text-align: center;
+}
+
+
+
+#headerwrap {
+  background: url(/css/img/bg.jpg) no-repeat center fixed;
+  margin-top: 40px;
+  padding-top: 150px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height:600px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#headerwrap h1 {
+  font-size: 80px;
+  color: white;
+}
+
+#send_email
+{
+  height: 50px;
+  width: 120px;
+  color: white;
+  background-color: green;
+  border-radius: 20px;
+  box-decoration-break: none;
+  outline: none;
+  border:none;
+  
+}
+#headerwrap h3 {
+  font-size: 20px;
+  color: white;
+}
